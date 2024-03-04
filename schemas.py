@@ -1,7 +1,12 @@
-
 import datetime as _dt
 
 import pydantic as _pydantic
+
+
+class Token(_pydantic.BaseModel):
+    access_token: str
+    token_type: str
+
 
 
 class _UserBase(_pydantic.BaseModel):
@@ -42,3 +47,4 @@ class Lead(_LeadBase):
 
     class Config:
         from_attributes = True
+
