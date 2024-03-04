@@ -43,7 +43,7 @@ async def create_token(
     db: _orm.Session = _fastapi.Depends(_services.get_db),
 ):
 
-    print('Отработала')
+    print("Отработала")
     user = await _services.authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise _fastapi.HTTPException(status_code=401, detail="Invalid Creeditionals")

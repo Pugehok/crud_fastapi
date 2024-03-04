@@ -37,7 +37,7 @@ async def create_user(user: _schemas.UserCreate, db: _orm.Session):
     db.add(user_obj)
     db.commit()
     db.refresh(user_obj)
-    print('Yes')
+    print("Yes")
     return user_obj
 
 

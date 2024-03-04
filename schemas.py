@@ -8,7 +8,6 @@ class Token(_pydantic.BaseModel):
     token_type: str
 
 
-
 class _UserBase(_pydantic.BaseModel):
     email: str
 
@@ -47,4 +46,3 @@ class Lead(_LeadBase):
 
     class Config:
         from_attributes = True
-
